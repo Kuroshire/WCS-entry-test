@@ -5,14 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
     "preview": "vite preview --port 8000",
     "server": "nodemon index.cjs",
-    "client": "npm start",
     "dev-start": "concurrently \"npm run dev\" \"npm run server\"",
+    "build": "vite build",
     "install-client": "npm install",
-    "heroku-build": "npm run build",
-    "heroku-postbuild": "npm run install-client && npm run heroku-build",
+    "heroku-postbuild": "npm run install-client && npm run build",
     "start": "node index.cjs"
   },
   "dependencies": {
