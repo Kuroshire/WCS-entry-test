@@ -14,9 +14,12 @@ function App() {
   const addedMember = () => {console.log("update")};
 
   useEffect(() => {
+    
     axios.get("/api/auth/members")
       .then((response) => {
         setMembers(response.data);
+      }).catch((err) => {
+        console.log("Api doesn't work.");
       });
     }, [addedMember]);
 
