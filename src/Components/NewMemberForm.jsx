@@ -10,7 +10,7 @@ export default function NewMemberForm(props) {
 
   const onSubmit = (data) => {
     //on peut ajouter une RegExp ici pour modif le data en forcant une majuscule sur le premier caractere
-    axios.post("http://localhost:8000/api/auth/addmember", data)
+    axios.post("/api/auth/addmember", data)
       .then(() => {
         props.addedMember;
         setNameTaken(`${data.name} a rejoint l'équipage!`);

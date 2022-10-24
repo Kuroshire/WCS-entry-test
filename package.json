@@ -30,5 +30,6 @@
     "concurrently": "^7.5.0",
     "nodemon": "^2.0.20",
     "vite": "^3.1.0"
-  }
+  },
+  "proxy": "https://wsc-entry-test-project.herokuapp.com"
 }

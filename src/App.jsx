@@ -8,11 +8,13 @@ import axios from 'axios';
 
 function App() {
 
+  axios.defaults.proxy.host = "https://wsc-entry-test-project.herokuapp.com";
+
   const [members, setMembers] = useState([]);
   const addedMember = () => {console.log("update")};
 
   useEffect(() => {
-    axios.get("http://localhost:8000/api/auth/members")
+    axios.get("/api/auth/members")
       .then((response) => {
         setMembers(response.data);
       });
